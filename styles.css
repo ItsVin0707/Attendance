@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(20, 31%, 22%);
+  --background: #F8F4E1;
+  --text: hsl(20, 24%, 8%);
+  --accent: hsl(20, 31%, 12%);
+  --card-bg: #fff7df;
+  --card-shadow: rgba(0, 0, 0, 0.2);
+} 
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.spand{
+    color: #FEBA17;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.headder {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .headder h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+  
+  .headder p {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-top: 0.5rem;
+  }
+
+.navbar {
+  position:fixed;
+  width: 100%;
+  background:#b9684f;
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+  background-color: #f7f0dc;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+    align-items: right;
+  gap: 2rem;
+}
+
+.nav-links a {
+    background: #f7f0dc;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: rgb(153, 0, 0);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    background: var(--primary);
+    color: white;
+  }
+
+.mobile-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.hero {
+  height: 80vh;
+  background: url(cback.jpeg) no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 30px;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+.hero-image {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#codess{
+  color: #cc7c2d;
+}
+.hero-image img {
+  max-width: 350px;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0)   ;
+    transform: rotate(0deg);           
+    animation: tiltIn 1.2s ease forwards;
+}
+.hero-text {
+  max-width: 550px;
+}
+
+.hero-text h4 {
+  font-size: 18px;
+  color: #fffefe;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background-color:   #cc7c2d;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #704a2a;
+}
+  .container-lemon{
+    background-color: rgba(0,0,0,0.3);
+    height: 300px;
+    max-height: 500px;
+    max-width: 600px;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  @keyframes tiltIn {
+    to {
+        transform: rotate(-15deg);      
+    }
+  }
+.menu {
+  padding: 5rem 0;
+  background: var(--background);
+}
+
+.menu h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  color: var(--primary);
+  margin-top: 1rem;
+}
+
+
+
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.login-btn {
+  background: var(--primary);
+  color: rgb(153, 0, 0) !important;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background: var(--accent);
+}
+
+.login-btn a:hover{
+    color: #FEBA17;
+}
+
+.auth-container {
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: -4rem;
+  background: url(back-g.jpg);
+}
+.auth-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+}
+
+.auth-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background: var(--accent);
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.auth-link a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+.menus{
+  padding-top: 100px;
+
+}
+ 
+.cons{
+  text-align: center;
+  font-size: 20px;
+}
+
+.menu-grid {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+  }
+  
+  .menu-section-title {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .menu-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--card-bg); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  .menu-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  .menu-card p {
+    font-size: 1rem;
+    margin: 4px 0;
+    margin-bottom: 0.5rem;
+    color: var(--text); 
+  }
+  
+  .price {
+    font-weight: bold;
+    color: var(--accent);
+  }
+
+  .menu-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  .contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("back-g.jpg") no-repeat center center/cover;
+  }
+  
+  .contact::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .contact > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .contact .content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 40px;
+    color: white;
+  }
+  
+  .contact .content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .contact .content p {
+    font-size: 16px;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+  }
+  
+  .contactInfo {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 50px;
+  }
+  
+  .contactInfo .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .contactInfo .icon {
+    font-size: 28px;
+    background: white;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .contactInfo .text h3 {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .contactForm {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contactForm h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contactForm .inputBox {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+  }
+  
+  .contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: #999;
+    transition: 0.3s;
+  }
+  
+  .contactForm .inputBox input:focus ~ span,
+  .contactForm .inputBox input:valid ~ span,
+  .contactForm .inputBox textarea:focus ~ span,
+  .contactForm .inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #2196f3;
+  }
+  
+  .contactForm .inputBox input[type="submit"] {
+    background: #ccc;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .contactForm .inputBox input[type="submit"]:hover {
+    background: #999;
+  }
+  .buy-btn {
+    background-color: #ffb347; /* warm accent color */
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+  }
+  
+  .buy-btn:hover {
+    background-color: #a15f0e;
+    width: 70%;
+    transition: .5s ease-in-out;
+  }
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .headder h1 {
+    font-size: 2rem;
+  }
+
+  .menu-card {
+    margin: 10px;
+    padding: 1.5rem;
+  }
+  .container-lemon{
+    height: 400px;
+  }
+  .contact {
+    padding: 30px 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactInfo, .contactForm {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .contactForm {
+    padding: 20px;
+  }
+
+  .contactForm form h2 {
+    font-size: 22px;
+  }
+
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea {
+    font-size: 14px;
+  }
+
+  .contactInfo .box {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contactInfo .icon {
+    margin-right: 15px;
+    font-size: 24px;
+  }
+
+  .contactInfo .text h3 {
+    font-size: 16px;
+  }
+
+  .contactInfo .text p {
+    font-size: 14px;
+  }
+  .content h2{
+    margin-top: 100px;
+  }
+}
+@media (max-width: 992px) {
+  .hero{
+    height: 110vh;
+    }
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .hero-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-text h4 {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Coffee|Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="icon" href="images/icons.png" type="image/x-icon"> 
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="registerName" placeholder="Full Name">
+            <div id="registerNameError" class="error"></div>
+
+            <input type="email" id="registerEmail" placeholder="Email">
+            <div id="registerEmailError" class="error"></div>
+
+            <input type="password" id="registerPassword" placeholder="Password">
+            <div id="registerPasswordError" class="error"></div>
+
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <div id="confirmPasswordError" class="error"></div>
+
+            <button type="submit" class="btns">Register</button>
+            <div class="login-link">
+                Already have an account? <a href="log-in.html">Login here</a>
+            </div>
+            
+        </form>
+    </div>
+    <script src="register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
